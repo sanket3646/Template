@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Appointment | YOUR SALON NAME</title>
+  <meta name="description" content="Book your salon appointment online at YOUR SALON NAME in [City]. Choose your service and preferred time." />
+  <link rel="canonical" href="https://example.com/booking.html" />
+
+  <!-- SEO -->
+  <meta property="og:title" content="Book Appointment at YOUR SALON NAME" />
+  <meta property="og:description" content="Easily book salon services online in [City]." />
+  <meta property="og:image" content="./assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://example.com/booking.html" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="icon" href="./assets/icons/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <img src="./assets/images/logo.svg" alt="Salon logo" class="h-10 w-10"/>
+        <span class="font-semibold text-lg">YOUR SALON NAME</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="./services.html">Services</a>
+        <a href="./booking.html" class="font-semibold">Booking</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold mb-4">Book Your Appointment</h1>
+    <p class="text-lg text-gray-600">Select your service, date, and time.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 border-t">
+    <div class="container mx-auto px-6 py-8 text-center text-sm text-gray-600">
+      © <span id="year"></span> YOUR SALON NAME — All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <section class="container mx-auto px-6 py-16 bg-gray-50">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Book Your Appointment</h2>
+
+  <div class="max-w-xl mx-auto bg-white rounded-lg shadow-lg p-8">
+    <form id="bookingForm" class="flex flex-col gap-4">
+      <input type="text" id="name" placeholder="Your Name" required class="border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input type="tel" id="phone" placeholder="Phone Number" required class="border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input type="email" id="email" placeholder="Email" class="border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      
+      <select id="service" required class="border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <option value="" disabled selected>Select Service</option>
+        <option value="Haircut">Haircut</option>
+        <option value="Hair Coloring">Hair Coloring</option>
+        <option value="Facial">Facial</option>
+        <option value="Massage Therapy">Massage Therapy</option>
+      </select>
+
+      <input type="datetime-local" id="appointmentDate" required class="border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+      <button type="submit" class="px-6 py-3 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition">
+        Pay & Book
+      </button>
+    </form>
+  </div>
+</section>
+<!-- Razorpay Checkout Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  const bookingForm = document.getElementById('bookingForm');
+
+  bookingForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const options = {
+      key: "YOUR_RAZORPAY_KEY", // Replace with your Razorpay key
+      amount: 50000, // Amount in paise (e.g., 50000 = ₹500)
+      currency: "INR",
+      name: "YOUR SALON NAME",
+      description: "Salon Appointment",
+      handler: function(response){
+        alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+        bookingForm.reset();
+      },
+      prefill: {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        contact: document.getElementById('phone').value
+      },
+      theme: {
+        color: "#6366F1"
+      }
+    };
+    const rzp = new Razorpay(options);
+    rzp.open();
+  });
+</script>
+<footer class="bg-gray-900 text-gray-200 py-12">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- About / Logo -->
+    <div>
+      <a href="./index.html" class="flex items-center gap-3 mb-4">
+        <img src="./assets/images/logo.svg" alt="Salon logo" class="h-10 w-10"/>
+        <span class="font-semibold text-xl text-white">YOUR SALON NAME</span>
+      </a>
+      <p class="text-gray-400">Premium hair & beauty services in [City]. Book your appointment today!</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="font-semibold text-lg mb-4">Contact Us</h3>
+      <ul class="space-y-2">
+        <li><a href="tel:+91XXXXXXXXXX" class="hover:text-white transition">📞 +91 XXXXX XXXXX</a></li>
+        <li><a href="mailto:info@yoursalon.com" class="hover:text-white transition">✉ info@yoursalon.com</a></li>
+        <li><a href="https://www.instagram.com/YOUR_INSTAGRAM/" target="_blank" class="hover:text-white transition">📸 Instagram</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="./index.html" class="hover:text-white transition">Home</a></li>
+        <li><a href="./services.html" class="hover:text-white transition">Services</a></li>
+        <li><a href="./booking.html" class="hover:text-white transition">Booking</a></li>
+        <li><a href="./contact.html" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="text-center text-gray-500 mt-8 border-t border-gray-700 pt-4 text-sm">
+    &copy; <span id="year"></span> YOUR SALON NAME. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,152 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>YOUR SALON NAME — Best Salon in [City]</title>
-  <meta name="description" content="Professional hair, beauty & spa services in [City]. Book online today for expert stylists and a relaxing experience." />
-  <link rel="canonical" href="https://example.com/" />
-
-  <!-- SEO social tags -->
-  <meta property="og:title" content="YOUR SALON NAME — Hair & Beauty in [City]" />
-  <meta property="og:description" content="Professional salon services. Book online now!" />
-  <meta property="og:image" content="./assets/images/og-image.jpg" />
-  <meta property="og:url" content="https://example.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon & Fonts -->
-  <link rel="icon" href="assets\images assets\salonglogodownloadfromchrome.webp" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Salon Name</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', system-ui, sans-serif; }
-  </style>
 </head>
-<body class="antialiased text-gray-800">
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- Header -->
- <header class="bg-white shadow-sm">
-  <div class="container mx-auto px-6 py-4 flex flex-wrap items-center justify-between">
-    
-    <!-- Logo -->
-    <a href="./index.html" class="flex items-center gap-3 mb-2 md:mb-0">
-      <img src="assets\images assets\salonglogodownloadfromchrome.webp" alt="Salon logo" class="h-10 w-10"/>
-      <span class="font-semibold text-lg">YOUR SALON NAME</span>
-    </a>
-
-    <!-- Nav links -->
-    <nav class="flex flex-wrap gap-4 items-center mb-2 md:mb-0">
-      <a href="./services.html" class="hover:underline">Services</a>
-      <a href="./booking.html" class="hover:underline">Booking</a>
-      <a href="./contact.html" class="hover:underline">Contact</a>
-    </nav>
-
-    <!-- Action buttons -->
-    <div class="flex flex-wrap gap-2 items-center">
-      <a href="tel:+91XXXXXXXXXX" class="px-3 py-2 rounded bg-indigo-600 text-white text-sm">Call</a>
-      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener" class="px-3 py-2 border rounded text-sm">WhatsApp</a>
-    </div>
-    
-  </div>
-</header>
-
-
-  <!-- Main -->
-  <main class="relative bg-gradient-to-r from-indigo-500 to-pink-500 text-white">
-  <div class="container mx-auto px-6 py-32 text-center">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-      Professional Hair & Beauty in [City]
-    </h1>
-    <p class="text-lg md:text-xl mb-8 drop-shadow-md">
-      Expert stylists • Premium products • Relaxing experience
-    </p>
-
-    <div class="flex flex-col md:flex-row justify-center gap-4">
-      <a href="./booking.html" class="px-8 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition">
-        Book Now
-      </a>
-      <a href="tel:+91XXXXXXXXXX" class="px-8 py-3 border border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">
-        Call
-      </a>
-      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener" class="px-8 py-3 border border-white rounded-lg hover:bg-white hover:text-indigo-600 transition">
-        WhatsApp
-      </a>
-    </div>
-  </div>
-</main>
-
-
-
-
-  <!-- Footer -->
-  <footer class="bg-gray-50 border-t">
-    <div class="container mx-auto px-6 py-8 text-center text-sm text-gray-600">
-      © <span id="year"></span> YOUR SALON NAME — All Rights Reserved
-    </div>
-  </footer>
-
-  <script src="./script.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <section class="container mx-auto px-6 py-16">
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Follow Us on Instagram</h2>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-    <!-- Embed posts -->
-    <iframe class="w-full h-80 rounded-lg shadow-lg" src="https://www.instagram.com/p/POST_ID/embed" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
-    <iframe class="w-full h-80 rounded-lg shadow-lg" src="https://www.instagram.com/p/POST_ID/embed" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
-    <iframe class="w-full h-80 rounded-lg shadow-lg" src="https://www.instagram.com/p/POST_ID/embed" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
-    <iframe class="w-full h-80 rounded-lg shadow-lg" src="https://www.instagram.com/p/POST_ID/embed" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
-  </div>
-
-  <div class="text-center mt-8">
-    <a href="https://www.instagram.com/YOUR_INSTAGRAM/" target="_blank" rel="noopener" class="px-6 py-3 bg-pink-400 text-white rounded-full font-semibold hover:bg-pink-500 transition">
-      Visit our Instagram
-    </a>
-  </div>
-</section>
-<footer class="bg-gray-900 text-gray-200 py-12">
-  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-    
-    <!-- About / Logo -->
-    <div>
-      <a href="./index.html" class="flex items-center gap-3 mb-4">
-        <img src="./assets/images/logo.svg" alt="Salon logo" class="h-10 w-10"/>
-        <span class="font-semibold text-xl text-white">YOUR SALON NAME</span>
-      </a>
-      <p class="text-gray-400">Premium hair & beauty services in [City]. Book your appointment today!</p>
-    </div>
-
-    <!-- Contact Info -->
-    <div>
-      <h3 class="font-semibold text-lg mb-4">Contact Us</h3>
-      <ul class="space-y-2">
-        <li><a href="tel:+91XXXXXXXXXX" class="hover:text-white transition">📞 +91 XXXXX XXXXX</a></li>
-        <li><a href="mailto:info@yoursalon.com" class="hover:text-white transition">✉ info@yoursalon.com</a></li>
-        <li><a href="https://www.instagram.com/YOUR_INSTAGRAM/" target="_blank" class="hover:text-white transition">📸 Instagram</a></li>
+  <!-- Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-pink-600">Salon Name</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="text-pink-600 font-semibold">Home</a></li>
+        <li><a href="services.html" class="hover:text-pink-600">Services</a></li>
+        <li><a href="booking.html" class="hover:text-pink-600">Booking</a></li>
+        <li><a href="contact.html" class="hover:text-pink-600">Contact</a></li>
       </ul>
     </div>
+  </nav>
 
-    <!-- Quick Links -->
-    <div>
-      <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
-      <ul class="space-y-2">
-        <li><a href="./index.html" class="hover:text-white transition">Home</a></li>
-        <li><a href="./services.html" class="hover:text-white transition">Services</a></li>
-        <li><a href="./booking.html" class="hover:text-white transition">Booking</a></li>
-        <li><a href="./contact.html" class="hover:text-white transition">Contact</a></li>
-      </ul>
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-pink-50">
+    <h2 class="text-4xl font-bold mb-4">Welcome to Salon Name</h2>
+    <p class="text-lg text-gray-700 mb-6">Luxury grooming and care at your fingertips.</p>
+    <div class="flex justify-center gap-4">
+      <a href="booking.html" class="bg-pink-600 text-white px-6 py-3 rounded-lg shadow hover:bg-pink-700">Book Now</a>
+      <a href="https://wa.me/919999999999?text=Hi,%20I%20want%20to%20book%20an%20appointment!" 
+         class="bg-green-500 text-white px-6 py-3 rounded-lg shadow hover:bg-green-600">WhatsApp</a>
     </div>
+  </section>
 
-  </div>
-
-  <div class="text-center text-gray-500 mt-8 border-t border-gray-700 pt-4 text-sm">
-    &copy; <span id="year"></span> YOUR SALON NAME. All rights reserved.
-  </div>
-</footer>
+  <!-- About / Features -->
+  <section class="max-w-6xl mx-auto p-8 grid md:grid-cols-3 gap-6">
+    <div class="p-6 bg-white rounded-lg shadow text-center">
+      <h3 class="font-semibold text-xl mb-2">Professional Staff</h3>
+      <p class="text-gray-600">Expert stylists and therapists for your perfect look.</p>
+    </div>
+    <div class="p-6 bg-white rounded-lg shadow text-center">
+      <h3 class="font-semibold text-xl mb-2">Modern Salon</h3>
+      <p class="text-gray-600">State-of-the-art equipment in a clean, comfortable space.</p>
+    </div>
+    <div class="p-6 bg-white rounded-lg shadow text-center">
+      <h3 class="font-semibold text-xl mb-2">Easy Booking</h3>
+      <p class="text-gray-600">Book via WhatsApp, call, or secure online payment.</p>
+    </div>
+  </section>
 
 </body>
 </html>
